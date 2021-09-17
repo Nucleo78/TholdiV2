@@ -1,0 +1,55 @@
+#fond{
+	margin-top:0%;
+}
+
+body{
+	postition:absolute;
+	background-color:rgb(18, 59, 77);
+	margin-left:15%;
+	margin-right:15%;
+	background-image:url("porte2.png");	
+	background-repeat: no-repeat;
+	background-position: top;
+	
+}
+
+.TitrePartie {
+	text-align:center;
+}
+
+.separationPartie{
+	background-color:white;font-size:1%
+}
+
+.TitreParties {
+color:white; font-family: Georgia, serif;font-size: 250%;margin-left:3%;font-weight:bold;text-decoration: underline;line-height:100%;
+}
+
+.SousParties {
+color:#fd9001; font-family: Georgia, serif;font-size: 140%;margin-left:-2.8%;text-decoration: underline;line-height:200%;
+}
+
+.CorpDeTexte {
+color:white; font-family:serif;font-size: 125%;margin-left:7.5%;margin-right:7.5%;line-height:115%;postition:absolute;
+}
+
+li {
+	list-style-type: square;color:rgb(0,210,210);margin-left:5%;font-weight:bold;line-height:120%
+}
+
+#ReeferImage{
+	position:relative;margin-left:auto;
+}
+
+.centre{
+	margin-top:1%;color:#EFF1C5;center;
+}
+
+
+
+#image1
+{
+	background-image:url(porte_conteneur.jpg);
+	background-repeat:no-repeat;
+	opacity:0.20;
+}
