@@ -26,7 +26,7 @@
 
         <form action="reservation_traitement.php" method="post" class="form-reservation">
             <div class="form-reservation">
-                <label for="dateDebutreservation"> Date de début de reservation </label>
+                <label for="dateDebutReservation"> Date de début de reservation </label>
                 <input type="date" name="dateDebutReservation">
             </div>
             <div class="form-reservation">
