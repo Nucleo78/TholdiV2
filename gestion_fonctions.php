@@ -1,8 +1,14 @@
-<?php 
+<?php
+
+function gestionnaireConnexion()
+{
+    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root', 'root',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    return $pdo;
+}
 
 function inscription($mdp,$login,$codePays,$contact,$telephone,$adrMel,$ville,$cp,$adresse,$raisonSociale)
 {
-    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root', 'root',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $pdo = gestionnaireConnexion();
 
     $req = "select code from utilisateur order by code";
     $pdoStatement = $pdo->query($req);
@@ -29,7 +35,7 @@ function inscription($mdp,$login,$codePays,$contact,$telephone,$adrMel,$ville,$c
 
 function connexion($login,$mdp)
 {    
-    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root','root',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $pdo = gestionnaireConnexion();
     $req = "select code,login,mdp,contact From utilisateur Where login like '".$login."'";
     $pdoStatement = $pdo->query($req);
     $users = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
@@ -56,7 +62,7 @@ function connexion($login,$mdp)
 
 function reservation($dateDebut,$dateFin,$volumeEstime,$codeVilleDisposition,$codeVilleRendre,$codeUtilisateur)
 {
-    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root','root',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $pdo = gestionnaireConnexion();
 
     $req = "INSERT INTO reservation(dateDebutReservation,dateFinReservation,volumeEstime,codeVilleMiseDisposition,codeVilleRendre,codeUtilisateur) values ('".$dateDebut."','".$dateFin."','".$volumeEstime."','".$codeVilleDisposition."','".$codeVilleRendre."','".$codeUtilisateur."')";
     $pdo->exec($req);
@@ -65,7 +71,7 @@ function reservation($dateDebut,$dateFin,$volumeEstime,$codeVilleDisposition,$co
 
 function reserver($codeReservation,$numTypeContainer,$qteReserver)
 {
-    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root','root',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $pdo = gestionnaireConnexion();
 
     $req = "INSERT INTO reserver(codeReservation,numTypeContainer,qteReserver) values ('".$codeReservation."','".$numTypeContainer."','".$qteReserver."')";
     $pdo->exec($req);
@@ -74,7 +80,7 @@ function reserver($codeReservation,$numTypeContainer,$qteReserver)
 function obtenirVilles()
 {
     $lesVilles = array();
-    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root','root',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $pdo = gestionnaireConnexion();
     if ($pdo != NULL) {
         $req = "select * from ville ";
         $pdoStatement = $pdo->query($req);
@@ -86,7 +92,7 @@ function obtenirVilles()
 function obtenirPays()
 {
     $lesPays = array();
-    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root', 'root',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $pdo = gestionnaireConnexion();
     if ($pdo != NULL)
     {
         $req = "select * from pays order by codePays";
@@ -99,7 +105,7 @@ function obtenirPays()
 function obtenirReservations()
 {
     $lesReservations = array();
-    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root', 'root',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $pdo = gestionnaireConnexion();
     if ($pdo != NULL)
     {
         $req = "select * from reservation where codeUtilisateur = ".$_SESSION['code']." order by codeReservation";
@@ -108,11 +114,11 @@ function obtenirReservations()
     }
     return $lesReservations;
 }
-
+    
 function obtenirContainer()
 {
     $lesContainers = array();
-    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root', 'root',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $pdo = gestionnaireConnexion();
     if ($pdo != NULL)
     {
         $req = "select * from typeContainer order by numTypeContainer";
