@@ -32,7 +32,7 @@ $_SESSION['login'] = $_POST['login'];*/
 <!-- </table> -->
     </div>
 <form action="inscription.php">
-         <button type="submit">Inscrivez-Vous</button>
+  <button type="submit">Inscrivez-Vous</button>
 </form>
 <?php /*    
 $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root','',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));

@@ -1,6 +1,7 @@
 <?php include "debut.php" ?>
 <link rel="stylesheet" href="reservation.css">
 <link rel="icon" href="tholdi_logo.png">
+<script type="text/javascript" src="error.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,7 +25,7 @@
             <img src="logo_tholdi.png" id="logoTholdi">
         </center>
 
-        <form action="reservation_traitement.php" method="post" class="form-reservation">
+        <form action="reservation_traitement.php" method="post" class="form-reservation" onsubmit="error()">
             <div class="form-reservation">
                 <label for="dateDebutReservation"> Date de début de reservation </label>
                 <input type="date" name="dateDebutReservation" required>

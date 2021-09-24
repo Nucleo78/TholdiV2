@@ -12,6 +12,10 @@ $codeUtililsateur = $_SESSION["code"];
 $today = date("F j, Y, g:i a");
 $dateReservation = strtotime($today);
 
+if ($dateDebut >= $dateFin) { 
+    
+ }
+
 reservation($dateDebut, $dateFin, $dateReservation, $volumeEstime, $codeVilleDisposition, $codeVilleRendre, $codeUtililsateur);
 
 header ("location:reserver.php");

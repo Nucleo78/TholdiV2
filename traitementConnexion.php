@@ -4,5 +4,5 @@ $login = $_POST["login"];
 $mdp = $_POST["mdp"];
 var_dump($_POST);
 connexion($login,$mdp);
-header ("location:connexion.php");
+header("location:index.php");
 ?>
