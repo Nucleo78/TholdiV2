@@ -6,7 +6,7 @@ function gestionnaireConnexion()
     return $pdo;
 }
 
-function inscription($mdp,$login,$codePays,$contact,$telephone,$adrMel,$ville,$cp,$adresse,$raisonSociale)
+function inscription($mdp, $login, $codePays, $contact, $telephone, $adrMel, $ville, $cp, $adresse, $raisonSociale)
 {
     $pdo = gestionnaireConnexion();
 
@@ -29,7 +29,7 @@ function inscription($mdp,$login,$codePays,$contact,$telephone,$adrMel,$ville,$c
     {
       $place = $n+1;
     }
-    $req = "INSERT INTO utilisateur (mdp,login,codePays,contact,telephone,adrMel,ville,cp,adresse,raisonSociale,code) Values ('".$mdp."','".$login."','".$codePays."','".$contact."','".$telephone."','".$adrMel."','".$ville."','".$cp."','".$adresse."','".$raisonSociale."','".$place."')";
+    $req = "INSERT INTO utilisateur (mdp, login, codePays, contact, telephone, adrMel, ville, cp, adresse, raisonSociale, code) Values ('".$mdp."','".$login."','".$codePays."','".$contact."','".$telephone."','".$adrMel."','".$ville."','".$cp."','".$adresse."','".$raisonSociale."','".$place."')";
     $pdo->exec($req);
 }
 
@@ -60,19 +60,31 @@ function connexion($login,$mdp)
 }
 
 
-function reservation($dateDebut,$dateFin,$volumeEstime,$codeVilleDisposition,$codeVilleRendre,$codeUtilisateur)
+function reservation($dateDebut, $dateFin, $dateReservation, $volumeEstime, $codeVilleDisposition, $codeVilleRendre, $codeUtilisateur)
 {
     $pdo = gestionnaireConnexion();
 
-    $req = "INSERT INTO reservation(dateDebutReservation,dateFinReservation,volumeEstime,codeVilleMiseDisposition,codeVilleRendre,codeUtilisateur) values ('".$dateDebut."','".$dateFin."','".$volumeEstime."','".$codeVilleDisposition."','".$codeVilleRendre."','".$codeUtilisateur."')";
+    $req = "INSERT INTO reservation(dateDebutReservation, dateFinReservation, dateReservation, volumeEstime, codeVilleMiseDisposition, codeVilleRendre, codeUtilisateur) values (".$dateDebut.", ".$dateFin.", ".$dateReservation.", ".$volumeEstime.", ".$codeVilleDisposition.", ".$codeVilleRendre.", ".$codeUtilisateur.")";
     $pdo->exec($req);
     //return $pdo=>lasInsertId();
 }
 
-function reserver($codeReservation,$numTypeContainer,$qteReserver)
+function obtenirDernierCodeReservation($codeUtilisateur)
 {
     $pdo = gestionnaireConnexion();
+    $codeReservation = array();
+    if ($pdo != NULL)
+    {
+        $req = "select codeReservation From reservation Where codeUtilisateur = ".$codeUtilisateur." Order by codeReservation DESC LIMIT 1";
+        $pdoStatement = $pdo->query($req);
+        $codeReservation = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+    }
+    return($codeReservation);
+}
 
+function reserver($codeReservation, $numTypeContainer, $qteReserver)
+{
+    $pdo = gestionnaireConnexion();
     $req = "INSERT INTO reserver(codeReservation,numTypeContainer,qteReserver) values ('".$codeReservation."','".$numTypeContainer."','".$qteReserver."')";
     $pdo->exec($req);
 }

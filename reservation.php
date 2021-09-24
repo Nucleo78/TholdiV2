@@ -27,15 +27,15 @@
         <form action="reservation_traitement.php" method="post" class="form-reservation">
             <div class="form-reservation">
                 <label for="dateDebutReservation"> Date de début de reservation </label>
-                <input type="date" name="dateDebutReservation">
+                <input type="date" name="dateDebutReservation" required>
             </div>
             <div class="form-reservation">
                 <label for="dateFinReservation"> Date de fin de reservation </label>
-                <input type="date" name="dateFinReservation">
+                <input type="date" name="dateFinReservation" required>
             </div>
             <div class="form-reservation">
                 <label for="volumeEstime"> Volume Estimé </label>
-                <input type="number" name="volumeEstime" min="0" max="30000" placeholder="0">
+                <input type="number" name="volumeEstime" min="1" max="30000" placeholder="0" required>
             </div>
             <div class="form-reservation">
                 <label for="codeVilleDep"> Ville de départ </label>
@@ -58,18 +58,6 @@
                     }
                     ?>
                 </select>
-            </div>
-            <div class="form-reservation">
-                <label for="typeContainer"> Type de conteneur</label>
-                <select name="typeContainer" id="typeContaineur">
-                    <?php
-                        $nBis = count($containers);
-                        for ($i = 0; $i < $nBis; $i++) {
-                            $chaine = '<option value="'.$containers[$i]["numTypeContainer"].'">'.$containers[$i]["libelleTypeContainer"].'</option>';
-                            echo $chaine;
-                        }
-                        ?>
-                </select><br>
             </div>
             <div class="form-reservation input">
                 <input type="submit" value="valider">

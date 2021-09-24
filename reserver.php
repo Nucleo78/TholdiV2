@@ -16,8 +16,8 @@
 		?>
 	<form action="reserver_traitement.php" method="post" class="form_reserver">
 
-		<label for="numTypeContainer"> Type Container </label>
-		<select name="numTypeContainer" id="numTypeContainer">
+		<label for="numTypeContainer"> Type de conteneur </label>
+		<select name="numTypeContainer" id="numTypeContainer" required>
 			<option value="" disabled selected hidden> Choisissez un conteneur </option>
 			<?php
 				for ($i=0; $i<$n; $i++)
@@ -29,10 +29,10 @@
 		</select><br>
 
 		<label for="qteReserver"> Quantité reservé </label>
-		<input type="number" name="qteReserver" id="qteReserver" min="1" placeholder="Quantité"> <br>
+		<input type="number" name="qteReserver" id="qteReserver" min="1" placeholder="Quantité" required> <br>
 
-		<input type="submit" value="Confirmer la réservation">
-		<input type="submit" formaction="reserver_traitement_bis.php" value="Ajouter une ligne de réservation">
+		<input type="submit" name="confirmerReservation" value="Confirmer la réservation">
+		<input type="submit" name="ajouterReservation" value="Ajouter une ligne de réservation">
 	</form>
 </body>
 </html>

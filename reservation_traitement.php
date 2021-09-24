@@ -9,9 +9,11 @@ $codeVilleDisposition = $_POST["codeVilleDep"];
 $codeVilleRendre = $_POST["codeVilleArriver"];
 $codeUtililsateur = $_SESSION["code"];
 
-reservation($dateDebut,$dateFin,$volumeEstime,$codeVilleDisposition,$codeVilleRendre,$codeUtililsateur);
-var_dump($dateDebut, $dateFin)
+$today = date("F j, Y, g:i a");
+$dateReservation = strtotime($today);
 
-//header ("location:index.php");
+reservation($dateDebut, $dateFin, $dateReservation, $volumeEstime, $codeVilleDisposition, $codeVilleRendre, $codeUtililsateur);
+
+header ("location:reserver.php");
 
 ?>
