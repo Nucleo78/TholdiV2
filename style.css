@@ -3,8 +3,8 @@
 }
 
 body{
-	postition:absolute;
-	background-color:rgb(18, 59, 77);
+	position:absolute;
+	background-color:rgb(238, 243, 245);
 	margin-left:15%;
 	margin-right:15%;
 	background-image:url("porte2.png");	
@@ -22,19 +22,40 @@ body{
 }
 
 .TitreParties {
-color:white; font-family: Georgia, serif;font-size: 250%;margin-left:3%;font-weight:bold;text-decoration: underline;line-height:100%;
+	color:white;
+	font-family: Georgia, serif;
+	font-size: 250%;
+	margin-left:3%;
+	font-weight:bold;
+	text-decoration: underline;
+	line-height:100%;
 }
 
 .SousParties {
-color:#fd9001; font-family: Georgia, serif;font-size: 140%;margin-left:-2.8%;text-decoration: underline;line-height:200%;
+	color:#fd9001; 
+	font-family: Georgia, serif;
+	font-size: 140%;
+	margin-left:-2.8%;
+	text-decoration: underline;
+	line-height:200%;
 }
 
 .CorpDeTexte {
-color:white; font-family:serif;font-size: 125%;margin-left:7.5%;margin-right:7.5%;line-height:115%;postition:absolute;
+	color:white; 
+	font-family:serif;
+	font-size: 125%;
+	margin-left:7.5%;
+	margin-right:7.5%;
+	line-height:115%;
+	position:absolute;
 }
 
 li {
-	list-style-type: square;color:rgb(0,210,210);margin-left:5%;font-weight:bold;line-height:120%
+	list-style-type: square;
+	color:rgb(0,210,210);
+	margin-left:5%;
+	font-weight:bold;
+	line-height:120%
 }
 
 #ReeferImage{
