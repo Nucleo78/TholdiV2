@@ -7,9 +7,9 @@
     		<?php include 'menu.php';
              ?>
 
-<center></center>
 <body>
-	<img src=images/logo_tholdi.png>
+<center>
+	<img src=images/logot_tholdi.png>
 <h1>
 	Connexion client
 </h1>
@@ -30,6 +30,6 @@
 <form action="inscription.php">
   <button type="submit">Inscrivez-Vous</button>
 </form>
-
+</center>
 </body>
 </html>
