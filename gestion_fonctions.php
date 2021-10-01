@@ -2,7 +2,7 @@
 
 function gestionnaireConnexion()
 {
-    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root', 'root',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $pdo = new PDO('mysql:host=localhost;dbname=tholdi', 'root', 'root', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
     return $pdo;
 }
 

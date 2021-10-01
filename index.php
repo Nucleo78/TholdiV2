@@ -14,8 +14,8 @@
         <?php include 'menu.php';
              ?>
              <center>
-            <img src="images/logo_tholdi.png" id="logoTholdi">
-        </center>
+                <img src="images/logo_tholdi.png" id="logoTholdi">
+            </center>
         <div id="fond">
             <div class="TitrePartie">
                 <div class="TitreParties">I.Presentation de la sociéte THOLDI</div>
@@ -103,6 +103,6 @@
             <br>
             <br>
             </div>
-		
+
 	</body>
 </html>
