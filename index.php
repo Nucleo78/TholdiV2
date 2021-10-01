@@ -78,28 +78,28 @@
             <br>
             Stockage et réparation de conteneurs frigorifiques
             <br>
-            <img src="Reefer.png" id="ReeferImage">
+            <img src="images/Reefer.png" id="ReeferImage">
             <div class="centre">Flexitank</div>
             <br>
             Transport de liquides en vrac non dangereux
             <br>
-            <img src="Flexitank.png" id="FlexitankImage">
+            <img src="images/Flexitank.png" id="FlexitankImage">
             <br>
             <div class="centre">Bulkliners, linerbags</div>
             <br>
             Installation et mise à disposition de conteneurs maritimes sur les aires de stockage
-            <br><img src="Bulkliners.png" id="BulklinersImage">
+            <br><img src="images/Bulkliners.png" id="BulklinersImage">
             <br><div class="centre">
             Services pièces détachées et accessoires
             <br>
-            <img src="Service.png" id="ServiceImage">
+            <img src="images/Service.png" id="ServiceImage">
             </div>
             En 2012, THOLDI fonde sa filiale « THOLDI DESIGN » qui a pour activité la vente, la location et la transformation des conteneurs pour d’autres usages.
             <br>
             <br>
             Elle transforme des conteneurs maritimes en espaces de bureaux ou ateliers de montages sur sites ou des conteneurs isothermes en conteneur frigorifiques et inversement.
             <br>
-            <img src="atelier.png" id="atelierImage">
+            <img src="images/atelier.png" id="atelierImage">
             <br>
             <br>
             </div>

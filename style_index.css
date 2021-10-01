@@ -6,7 +6,7 @@ body {
 	background-position: top;
 }
 #fond{
-	postition:absolute;
+	position:absolute;
 	margin-left:15%;
 	margin-right:15%;
     color:white;
