@@ -14,7 +14,7 @@
         <?php include 'menu.php';
              ?>
              <center>
-            <img src="logo_tholdi.png" id="logoTholdi">
+            <img src="images/logo_tholdi.png" id="logoTholdi">
         </center>
         <div id="fond">
             <div class="TitrePartie">

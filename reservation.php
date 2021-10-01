@@ -22,7 +22,7 @@
 
     <body>
         <center>
-            <img src="logo_tholdi.png" id="logoTholdi">
+            <img src="images/logo_tholdi.png" id="logoTholdi">
         </center>
 
         <form action="reservation_traitement.php" method="post" class="form-reservation" onsubmit="error()">

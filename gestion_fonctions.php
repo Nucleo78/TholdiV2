@@ -140,4 +140,17 @@ function obtenirContainer()
     return $lesContainers;
 }
 
+function supprimerReservation($codeReservation)
+{
+    $pdo = gestionnaireConnexion();
+    if ($pdo != NULL)
+    {
+        $req1 = "DELETE FROM reserver where codeReservation = ".$codeReservation."";
+        $pdo->exec($req1);
+
+        $req2 = "DELETE FROM reservation where codeReservation = ".$codeReservation."";
+        $pdo->exec($req2);
+    }
+}
+
 ?>

@@ -19,7 +19,7 @@
             }
              ?>
              <center>
-            <img src="logo_tholdi.png" id="logoTholdi">
+            <img src="images/logo_tholdi.png" id="logoTholdi">
         </center>
         <div id="fond">
             <?php
@@ -32,7 +32,7 @@
                     echo ('Date du début de la reservation :' . gmdate("Y-m-d",$lesReservations[$i]['dateDebutReservation']).'<br>');
                     echo ('Date de fin de la reservation :' . gmdate("Y-m-d",$lesReservations[$i]['dateFinReservation']).'<br>');
                     echo ('Volume Estimé :' . $lesReservations[$i]['volumeEstime'].'<br>');
-                    echo ('<form action="supprimer_reservation.php" method="post"> <input type="submit" value="Supprimer"> </form> </div>');
+                    echo ('<form action="supprimer_reservation.php" method="post"> <button type="submit" name="codeReservation" value="'.$lesReservations[$i]['codeReservation'].'">Supprimer</button> </form> </div>');
                 }
             ?>
             

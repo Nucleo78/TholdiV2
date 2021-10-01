@@ -25,7 +25,7 @@
 					$chaine = '<option value="'.$containers[$i]["numTypeContainer"].'">'.$containers[$i]["libelleTypeContainer"].'</option>';
 					echo ($chaine);
 				}
-			?>			
+			?>
 		</select><br>
 
 		<label for="qteReserver"> Quantité reservé </label>

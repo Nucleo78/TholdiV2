@@ -13,7 +13,7 @@
 <body>
 <center>
         <center>   
-        <img src=logo_tholdi.png>
+        <img src=images/logo_tholdi.png>
         </center>
     <h1>
         Inscription client

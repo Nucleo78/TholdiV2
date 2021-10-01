@@ -9,7 +9,7 @@
 
 <center>	
 <body>
-	<img src=logo_tholdi.png>
+	<img src=images/logo_tholdi.png>
 <h1>
 	Connexion client
 </h1>

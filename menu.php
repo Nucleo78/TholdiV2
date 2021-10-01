@@ -11,7 +11,7 @@ if(isset($_REQUEST['logout']))
 
 <nav>
     <ul>
-        <a href="index.php"><img src="tholdi_logo.png" alt="logo"></a>
+        <a href="index.php"><img src="images/tholdi_logo.png" alt="logo"></a>
         <li><a href="index.php" id="Accueil"><span class="nav">Accueil</span></a></li>
         <li><a href="consultation.php"><span class="nav">Consultation</span></a></li>
         <li><a href="reservation.php"><span class="nav">Réservation</span></a></li>
