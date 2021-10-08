@@ -32,7 +32,8 @@
                     echo ('Date du début de la reservation :' . gmdate("Y-m-d",$lesReservations[$i]['dateDebutReservation']).'<br>');
                     echo ('Date de fin de la reservation :' . gmdate("Y-m-d",$lesReservations[$i]['dateFinReservation']).'<br>');
                     echo ('Volume Estimé :' . $lesReservations[$i]['volumeEstime'].'<br>');
-                    echo ('<form action="supprimer_reservation.php" method="post"> <button type="submit" name="codeReservation" value="'.$lesReservations[$i]['codeReservation'].'">Supprimer</button> </form> </div>');
+                    echo ('<form action="supprimer_reservation.php" method="post"> <button type="submit" name="codeReservation" value="'.$lesReservations[$i]['codeReservation'].'">Supprimer</button> </form>');
+                    echo ('<form action="pdf.php" method="post"> <button type="submit" name="Devis">Devis</button> </form> </div>');
                 }
             ?>
             
