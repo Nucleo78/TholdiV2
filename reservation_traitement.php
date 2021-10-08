@@ -18,6 +18,8 @@ if ($dateDebut >= $dateFin) {
 
 reservation($dateDebut, $dateFin, $dateReservation, $volumeEstime, $codeVilleDisposition, $codeVilleRendre, $codeUtililsateur);
 
+$_COOKIE['dateDebut'] = $dateDebut;
+
 header ("location:reserver.php");
 
 ?>

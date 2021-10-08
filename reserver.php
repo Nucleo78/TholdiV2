@@ -34,5 +34,9 @@
 		<input type="submit" name="confirmerReservation" value="Confirmer la réservation">
 		<input type="submit" name="ajouterReservation" value="Ajouter une ligne de réservation">
 	</form>
+	<?php var_dump($_SESSION);
+	var_dump($_POST);
+	var_dump($_COOKIE);
+	 ?>
 </body>
 </html>
