@@ -28,7 +28,7 @@ li{
 body {
 	background-color: rgb(18, 59, 77);
 	 color: white/*#0B2632*/; 
-	background-image: url(porTrans.png);
+	background-image: url(images/porTrans.png);
 	background-repeat:no-repeat;
 }
 button{

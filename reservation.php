@@ -1,6 +1,6 @@
 <?php include "debut.php" ?>
 <link rel="stylesheet" href="reservation.css">
-<link rel="icon" href="tholdi_logo.png">
+<link rel="icon" href="images/tholdi_logo.png">
 <script type="text/javascript" src="error.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

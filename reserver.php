@@ -1,6 +1,6 @@
 <?php include "debut.php" ?>
 <link rel="stylesheet" href="reserver.css">
-<link rel="icon" href="tholdi_logo.png">
+<link rel="icon" href="images/tholdi_logo.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head> 
